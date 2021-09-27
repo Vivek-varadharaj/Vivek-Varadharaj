@@ -1600,6 +1600,16 @@ a:focus {
 }
 
 #message {
-    width: 213px;
+    width: 80%;
     height: 77px;
+}
+
+#name{
+    width: 80%;
+}
+#email{
+    width: 80%;
+}
+#subject{
+    width: 80%;
 }
