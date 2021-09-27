@@ -161,6 +161,8 @@ form.addEventListener("submit", (e)=>{
         e.preventDefault()
         
     }
+
+    window.history.back()
   
 })
 
