@@ -1616,8 +1616,9 @@ a:focus {
 
 #form input{
     border-radius: 5px;
-    border-style: none;
+    /* border-style: none; */
     outline: none;
+    border: 2px solid black;
 }
 
 #form textarea{

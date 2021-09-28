@@ -674,6 +674,7 @@
                         <img class="img-fluid" src="img/vivek3.jpg" alt="">
                     </div>
                     <div class="col-md-8 d">
+                        <h4 id="submitted"></h4>
                         <div id="error"></div>
                         <form id="form" method="POST"
                             action="https://script.google.com/macros/s/AKfycbxZ1mjp9UWZJKPGI_daWex6qh8dtW8y1Vu8WRQpHU-m0ILO_63xzcHpWoaL0wZFhmnm/exec">
@@ -685,7 +686,7 @@
                                 </div>
 
                                 <div class="col-8 p-3" >
-                                    <input type="text" id="name" name="Name" placeholder="Your name" class="p-1">
+                                    <input onblur="checkit()" type="text" id="name" name="Name" placeholder="Your name" class="p-1">
                                     <p id="noname"></p>
                                 </div>
 
@@ -697,7 +698,7 @@
                                 </div>
 
                                 <div class="col-8 p-3" >
-                                    <input class="p-1" type="text" id="email" name="Email" placeholder="Your Email">
+                                    <input onblur="checkit1()" class="p-1" type="text" id="email" name="Email" placeholder="Your Email">
                                     <p id="noemail"></p>
                                 </div>
 
@@ -709,7 +710,7 @@
                                 </div>
 
                                 <div class="col-8 p-3" >
-                                    <input class="p-1" type="text" id="subject" name="Subject" placeholder="Your subject">
+                                    <input onblur="checkit2()" class="p-1" type="text" id="subject" name="Subject" placeholder="Your subject">
                                     <p id="nosubject"></p>
                                 </div>
 
@@ -722,14 +723,14 @@
                                 </div>
 
                                 <div class="col-8 p-3" >
-                                    <textarea class="p-1" type="text" id="message" name="Message"
+                                    <textarea  class="p-1" type="text" id="message" name="Message"
                                         placeholder="Your Message"></textarea>
                                     <p id="nomessage"></p>
                                 </div>
 
                             </div>
 
-                            <div class="row mt-5 justify-content-center">
+                            <div   onclick="setTimeout(function() { window.location.reload(); }, 2000) " class="row mt-5 justify-content-center">
                                 <button  class="btn-lg bt-primary" type="submit" value="submit">Submit</button>
                             </div>
 

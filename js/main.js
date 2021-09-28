@@ -114,57 +114,136 @@ let email = document.getElementById("email");
 let subject = document.getElementById("subject");
 let message = document.getElementById("message");
 let form = document.getElementById("form");
-// let errorElement = document.getElementById("error");
+let errorElement = document.getElementById("error");
+
+var flag=0;
+
+function checkit(){
+    var regx = /^[a-zA-Z ]*$/;
+    let check = name.value;
+   
+   if (name.value === "" || null  ){
+       document.getElementById("noname").innerHTML = "Name required."
+       name.style.borderColor="red"
+       flag++;
+   }
+   else{
+       document.getElementById("noname").innerHTML = ""
+       name.style.borderColor="green"
+   }
+   if (regx.test(check)){
+    // name.style.borderColor="green"
+   }
+   else{
+    document.getElementById("noname").innerHTML = "Enter a valid name"
+    name.style.borderColor="red"
+    flag++;
+   }
+   
+ }
+
+  function checkit1(){
+    let mail = email.value;
+    var regx = /^([a-zA-Z0-9\._]+)@([a-zA-Z0-9])+.([a-z]+)(.[a-z]+)?$/;
+    if (email.value === "" || null){
+        flag ++;
+        document.getElementById("noemail").innerHTML = "Email required."
+        email.style.borderColor = "red"
+    }
+     if (regx.test (mail)){
+        console.log(mail)
+        document.getElementById("noemail").innerHTML = "Email valid."
+        email.style.borderColor = "green"
+
+    }
+    else {
+        flag ++;
+        document.getElementById("noemail").innerHTML = "Email not valid."
+        email.style.borderColor = "red"
+    }
+ }
+
+
+ function checkit2(){
+
+   if (subject.value === "" || null){
+       
+       document.getElementById("nosubject").innerHTML = "Subject required"
+       subject.style.borderColor="red"
+       flag ++;
+   }
+   else {
+    document.getElementById("nosubject").innerHTML = ""
+    subject.style.borderColor="green"
+   }
+   
+ }
+
+ function checkit3(){
+    if (message.value === "" || null){
+        flag ++;
+        document.getElementById("nomessage").innerHTML = "Message required"
+        message.style.borderColor="red"
+    }
+
+    else{
+        document.getElementById("nomessage").innerHTML = ""
+        message.style.borderColor="green"
+    }
+ }
 
  
 form.addEventListener("submit", (e)=>{
     let flag = 0;
     var regx = /^([a-zA-Z0-9\._]+)@([a-zA-Z0-9])+.([a-z]+)(.[a-z]+)?$/;
+    
     let mail = email.value;
-    console.log(mail)
+    // console.log(mail)
     
 
     if (name.value === "" || null){
-        document.getElementById("noname").innerHTML = "Name required."
+        // document.getElementById("noname").innerHTML = "Name required."
+        // name.style.borderColor="red"
         flag++;
+    }
+    else{
+        document.getElementById("noname").innerHTML = ""
+        // name.style.borderColor="green"
     }
     
     if (email.value === "" || null){
         flag ++;
-        document.getElementById("noemail").innerHTML = "Email required."
+        // document.getElementById("noemail").innerHTML = "Email required."
     }
      if (regx.test (mail)){
-        console.log(mail)
-        document.getElementById("noemail").innerHTML = "Email valid."
+        // console.log(mail)
+        // document.getElementById("noemail").innerHTML = "Email valid."
     }
     else {
         flag ++;
-        document.getElementById("noemail").innerHTML = "Email not valid."
+        // document.getElementById("noemail").innerHTML = "Email not valid."
     }
 
     if (subject.value === "" || null){
         flag ++;
-        document.getElementById("nosubject").innerHTML = "Subject required"
+        // document.getElementById("nosubject").innerHTML = "Subject required"
         
     }
 
-    if (message.value === "" || null){
-        flag ++;
-        document.getElementById("nomessage").innerHTML = "Message required"
-        
-    }
+   
     if ( flag===0){
-        alert("form submitted successfully")
+      document.getElementById("submitted").innerHTML= "form submitted successfully"
     }
 
-    if (flag > 0){
-        e.preventDefault()
-        
-    }
+   if (flag>0){
+       alert ("Please fill the form completely")
+    e.preventDefault()
 
-    window.history.back()
+   }
+           
   
 })
 
-
  
+       
+           
