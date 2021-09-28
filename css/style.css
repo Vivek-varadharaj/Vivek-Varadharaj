@@ -1613,3 +1613,15 @@ a:focus {
 #subject{
     width: 80%;
 }
+
+#form input{
+    border-radius: 5px;
+    border-style: none;
+    outline: none;
+}
+
+#form textarea{
+    border-radius: 5px;
+    border-style: none;
+    outline: none;
+}
