@@ -686,7 +686,7 @@
                                 </div>
 
                                 <div class="col-8 p-3" >
-                                    <input onblur="checkit()" type="text" id="name" name="Name" placeholder="Your name" class="p-1">
+                                    <input onkeyup="checkit()" type="text" id="name" name="Name" placeholder="Your name" class="p-1">
                                     <p id="noname"></p>
                                 </div>
 
@@ -698,7 +698,7 @@
                                 </div>
 
                                 <div class="col-8 p-3" >
-                                    <input onblur="checkit1()" class="p-1" type="text" id="email" name="Email" placeholder="Your Email">
+                                    <input onkeyup="checkit1()" class="p-1" type="text" id="email" name="Email" placeholder="Your Email">
                                     <p id="noemail"></p>
                                 </div>
 
@@ -710,7 +710,7 @@
                                 </div>
 
                                 <div class="col-8 p-3" >
-                                    <input onblur="checkit2()" class="p-1" type="text" id="subject" name="Subject" placeholder="Your subject">
+                                    <input onkeyup="checkit2()" class="p-1" type="text" id="subject" name="Subject" placeholder="Your subject">
                                     <p id="nosubject"></p>
                                 </div>
 
@@ -730,7 +730,7 @@
 
                             </div>
 
-                            <div   onclick="setTimeout(function() { window.location.reload(); }, 2000) " class="row mt-5 justify-content-center">
+                            <div   onclick=" " class="row mt-5 justify-content-center">
                                 <button  class="btn-lg bt-primary" type="submit" value="submit">Submit</button>
                             </div>
 

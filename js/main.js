@@ -232,10 +232,14 @@ form.addEventListener("submit", (e)=>{
 
    
     if ( flag===0){
+
+        reload();
+        // alert("Form submitted successfully")
       document.getElementById("submitted").innerHTML= "form submitted successfully"
     }
 
    if (flag>0){
+       
        alert ("Please fill the form completely")
     e.preventDefault()
 
@@ -243,6 +247,13 @@ form.addEventListener("submit", (e)=>{
            
   
 })
+
+function reload(){
+    setTimeout(function() { window.location.reload(); }, 2000)
+    
+    
+    
+}
 
  
        
