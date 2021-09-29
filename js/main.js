@@ -124,7 +124,7 @@ function checkit(){
    
    if (name.value === "" || null  ){
        document.getElementById("noname").innerHTML = "Name required."
-       name.style.borderColor="red"
+    //    name.style.borderColor="red"
        flag++;
    }
    else{
@@ -132,11 +132,11 @@ function checkit(){
        name.style.borderColor="green"
    }
    if (regx.test(check)){
-    // name.style.borderColor="green"
+    name.style.borderColor="green"
    }
    else{
     document.getElementById("noname").innerHTML = "Enter a valid name"
-    name.style.borderColor="red"
+    // name.style.borderColor="red"
     flag++;
    }
    
@@ -148,7 +148,7 @@ function checkit(){
     if (email.value === "" || null){
         flag ++;
         document.getElementById("noemail").innerHTML = "Email required."
-        email.style.borderColor = "red"
+        // email.style.borderColor = "red"
     }
      if (regx.test (mail)){
         console.log(mail)
@@ -159,7 +159,7 @@ function checkit(){
     else {
         flag ++;
         document.getElementById("noemail").innerHTML = "Email not valid."
-        email.style.borderColor = "red"
+        // email.style.borderColor = "red"
     }
  }
 
@@ -233,7 +233,7 @@ form.addEventListener("submit", (e)=>{
    
     if ( flag===0){
 
-        reload();
+        
         // alert("Form submitted successfully")
       document.getElementById("submitted").innerHTML= "form submitted successfully"
     }
@@ -248,12 +248,7 @@ form.addEventListener("submit", (e)=>{
   
 })
 
-function reload(){
-    setTimeout(function() { window.location.reload(); }, 2000)
-    
-    
-    
-}
+
 
 const navLinks = document.querySelectorAll('.nav-item')
 const menuToggle = document.getElementById('navbarCollapse')

@@ -1315,7 +1315,7 @@ a:focus {
     position: relative;
     width: 100%;
     margin: 45px 0;
-    background: #000000;
+    background: #EF233C;
 }
 
 .contact .container-fluid {
@@ -1326,7 +1326,7 @@ a:focus {
 .contact .contact-form {
     position: relative;
     padding: 90px 0 90px 45px;
-    background: #000000;
+    background: #8b7f7f;
 }
 
 .contact .contact-form input {
@@ -1599,7 +1599,7 @@ a:focus {
     }
 }
 
-#message {
+/* #message {
     width: 80%;
     height: 77px;
 }
@@ -1612,17 +1612,61 @@ a:focus {
 }
 #subject{
     width: 80%;
-}
+} */
 
-#form input{
-    border-radius: 5px;
-    /* border-style: none; */
-    outline: none;
-    border: 2px solid black;
-}
-
-#form textarea{
+/* #form input{
     border-radius: 5px;
     border-style: none;
     outline: none;
+    border: 2px solid black;
+} */
+
+#form textarea {
+    background-color: #EF233C;
+    width: 100%;
+    border-radius: 0px;
+    border-style: none;
+    outline: none;
+    border-bottom: 1px solid white;
+}
+#form label{
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 25px;
+    font-size: 22px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+#form input {
+    
+    width: 100%;
+    background: rgb(241 241 241 / 0%);
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    color: #dddddd;
+    height: 38px;
+}
+#form input::placeholder{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: rgb(70, 65, 65);
+}
+.button button {
+    background-color: #fff;
+    border-radius: 10px;
+    font-weight: 600;
+    width: 150px;
+    border: none;
+    outline: none;
+}
+.button button:hover{
+    background-color: rgb(218, 210, 210);
+    color: #000;
+}
+
+#form textarea::placeholder{
+    color:rgb(70, 65, 65);
+
 }
